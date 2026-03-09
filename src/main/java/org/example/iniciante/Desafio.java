@@ -10,7 +10,7 @@ public class Desafio {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<Ninja> listaDeNinjas = new ArrayList<>();
-        for (int i = 0; i < 3 ; i++){
+        for (int i = 0; i < 1 ; i++){
             System.out.println("--CADASTRO DO " + (i + 1) +"º NINJAS--");
 
             System.out.println("Qual é o nome:");
@@ -29,7 +29,10 @@ public class Desafio {
             System.out.println("Qual é o nome da missão:");
             String nomeMissao = sc.nextLine();
 
-            Ninja ninja = new Ninja(nome, idade,missao,nomeMissao,nivelDificuldade,status);
+            System.out.println("Informe qual é o número total de missões realizadas:");
+            int rank = sc.nextInt();
+            sc.nextLine();
+            Ninja ninja = new Ninja(nome, idade,missao,nomeMissao,nivelDificuldade,status, rank);
 
             listaDeNinjas.add(ninja);
         }

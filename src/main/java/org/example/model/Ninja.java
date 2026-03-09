@@ -7,15 +7,18 @@ public class Ninja {
     private String missao;
     private String nomeDaMissao;
     private int nivelDificuldade;
-    private boolean statusConclusão;
+    private boolean statusConclusao;
+    private String rank;
+    private int numeroDeMissao;
 
-    public Ninja(String name, int idade, String missao, String nomeDaMissao, int nivelDificuldade, boolean statusConclusão) {
+    public Ninja(String name, int idade, String missao, String nomeDaMissao, int nivelDificuldade, boolean statusConclusão,int rank) {
         this.name = name;
         this.idade = idade;
         this.missao = missao;
         this.nomeDaMissao = nomeDaMissao;
         this.nivelDificuldade = verificarNivelDificuldade();
-        this.statusConclusão = statusConclusão;
+        this.statusConclusao = statusConclusao;
+        this.rank = rank(numeroDeMissao,idade);
     }
 
     public String getName() {
@@ -58,14 +61,24 @@ public class Ninja {
         this.nivelDificuldade = nivelDificuldade;
     }
 
-    public boolean isStatusConclusão() {
-        return statusConclusão;
+    public boolean isStatusConclusao() {
+        return statusConclusao;
     }
 
-    public void setStatusConclusão(boolean statusConclusão) {
-        this.statusConclusão = statusConclusão;
+    public void setStatusConclusao(boolean statusConclusao) {
+        this.statusConclusao = statusConclusao;
     }
 
+    public String rank(int numeroDeMissoes, int idade){
+        if(numeroDeMissoes == 10 && idade > 15){
+            return "Rank: Chunnin";
+
+        } else if (numeroDeMissoes >= 20) {
+            return "Rank: Jounin ";
+        }else{
+            return "Rank: Gennim";
+        }
+    }
     public int verificarNivelDificuldade(){
         if(idade<18){
             return 1;
@@ -75,7 +88,7 @@ public class Ninja {
     }
 
     public String status(){
-        if(statusConclusão == true){
+        if(statusConclusao == true){
             return "Concluído";
         }else {
             return "Incompleto";
@@ -88,6 +101,7 @@ public class Ninja {
                 " | Idade: " + idade +
                 " | Missão: " + nomeDaMissao +
                 " | Dificuldade: " + nivelDificuldade +
-                " | Status: " + status();
+                " | Status: " + status() +
+                " | Rank: " + rank(numeroDeMissao, idade);
     }
 }
