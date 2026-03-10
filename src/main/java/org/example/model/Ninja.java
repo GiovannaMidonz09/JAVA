@@ -79,14 +79,9 @@ public class Ninja {
             return "Rank: Gennim";
         }
     }
-    public int verificarNivelDificuldade(){
-        if(idade<18){
-            return 1;
-        }else {
-            return 2;
-        }
+    public int verificarNivelDificuldade() {
+      return  (idade < 18) ? 1 : 2;
     }
-
     public String status(){
         if(statusConclusao == true){
             return "Concluído";

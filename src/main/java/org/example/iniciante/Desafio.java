@@ -41,5 +41,7 @@ public class Desafio {
        for(Ninja n :listaDeNinjas){
            System.out.println(n);
        }
+
+       sc.close();
     }
 }
