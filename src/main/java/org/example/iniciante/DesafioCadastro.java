@@ -1,10 +1,6 @@
 package org.example.iniciante;
 
 
-import org.example.model.Ninja;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class DesafioCadastro {

@@ -1,6 +1,6 @@
 package org.example.iniciante;
 
-import org.example.model.Ninja;
+import org.example.iniciante.model.Ninja;
 
 import java.util.ArrayList;
 import java.util.List;
