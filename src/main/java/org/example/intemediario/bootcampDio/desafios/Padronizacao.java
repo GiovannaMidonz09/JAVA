@@ -1,4 +1,4 @@
-package org.example.intemediario.bootcampDio;
+package org.example.intemediario.bootcampDio.desafios;
 
 import java.util.Scanner;
 
