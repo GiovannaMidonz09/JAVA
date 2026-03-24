@@ -1,10 +1,26 @@
-package org.example.intemediario.bootcampDio.Empresa;
+package org.example.intemediario.bootcampDio.Empresa.doMain;
 
 public non-sealed class Manager extends Employee {
 
     private String login;
     private String password;
     private double comission;
+
+    public Manager(String name, String code, String address, int age, double salary, double comission, String password, String login) {
+        super(name, code, address, age, salary);
+        this.comission = comission;
+        this.password = password;
+        this.login = login;
+    }
+
+    public Manager() {
+
+    }
+
+    @Override
+    public String getCode(){
+        return "SL" + this.code;
+    }
 
     public String getLogin() {
         return login;

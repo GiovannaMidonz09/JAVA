@@ -1,5 +1,9 @@
 package org.example.intemediario.bootcampDio.Empresa;
 
+import org.example.intemediario.bootcampDio.Empresa.doMain.Employee;
+import org.example.intemediario.bootcampDio.Empresa.doMain.Manager;
+import org.example.intemediario.bootcampDio.Empresa.doMain.Salesman;
+
 public class Main {
     public static void main(String[] args) {
         printEmployee(new Manager());
